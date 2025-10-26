@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Моя домашняя страница</title>
+  <style>
+    body {
+      background-color: #f0f8ff; /* фон страницы */
+      font-family: Courier New, sans-serif; /* основной текст Verdana */
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      font-family: Courier New, sans-serif; /* заголовки Arial */
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #003366;
+      font-size: 18px;
+    }
+    section {
+      display: none; /* скрываем все разделы по умолчанию */
+    }
+    section.active {
+      display: block;
+    }
+    .photo {
+      max-width: 300px;
+      height: auto;
+      margin: 20px;
+    }
+    .align-left { text-align: left; }
+    .align-right { text-align: right; }
+    .align-justify { text-align: justify; }
+    .photo-left { float: left; margin-right:20px; }
+    .photo-right { float: right; margin-left:20px; }
+    .clear { clear: both; }
+  </style>
+</head>
+<body>
+
+  <h1>Моя домашняя страница</h1>
+
+  <nav>
+    <a href="#about" onclick="showSection('about'); return false;">Обо мне</a>
+    <a href="#family" onclick="showSection('family'); return false;">Моя семья</a>
+    <a href="#friends" onclick="showSection('friends'); return false;">Друзья</a>
+    <a href="#hobbies" onclick="showSection('hobbies'); return false;">Мои увлечения</a>
+  </nav>
+
+  <!-- Страница 2: Обо мне -->
+  <section id="about" class="active">
+    <h1>Обо мне</h1>
+    <img src="https://i.pinimg.com/originals/01/27/e8/0127e823e1fde5784b30279e3f211795.png" alt="Фото обо мне" class="photo photo-left">
+    <p class="align-justify">
+      Привет! Меня зовут Данила Рябов. Я родился и вырос в небольшом городе на севере Франции, недалеко от Кале. Сейчас я учусь и живу в красивом регионе О-де-Франс. Мне нравится открывать новые места, знакомиться с культурой и людьми. Моей мечтой всегда было путешествовать и расширять кругозор.
+    </p>
+    <p class="align-left">
+      В свободное время я люблю читать книги, особенно фантастику и приключения. Также увлекаюсь веб-дизайном и экспериментирую с HTML и CSS, чтобы создавать собственные мини-проекты. Это помогает мне развиваться и приносит удовольствие.
+    </p>
+    <div class="clear"></div>
+  </section>
+
+  <!-- Страница 3: Моя семья -->
+  <section id="family">
+    <h1>Моя семья</h1>
+    <img src="https://i.pinimg.com/originals/23/f2/9a/23f29a98378ca6c8ddce56da009d6d10.jpg" alt="Фото семьи" class="photo photo-right">
+    <p class="align-right">
+      В моей семье трое: мама, папа и я. Моя мама, Ольга Петрова, работает архитектором и всегда вдохновляет меня своим творческим подходом. Папа, Дмитрий Иванов, инженер-механик, постоянно совершенствует свои навыки и любит помогать другим.
+    </p>
+    <p class="align-justify">
+      Мы часто вместе проводим выходные: гуляем по паркам, ездим на природу и устраиваем семейные пикники. Эти моменты мне особенно дороги — ведь семья всегда рядом, когда нужно поддержать и поделиться радостью. 
+    </p>
+    <div class="clear"></div>
+  </section>
+
+  <!-- Страница 4: Друзья -->
+  <section id="friends">
+    <h1>Друзья</h1>
+    <img src="https://i.pinimg.com/736x/f7/18/96/f718965f872e7409d9f2fdee47a1f358.jpg" alt="Фото друзей" class="photo photo-left">
+    <p class="align-left">
+      У меня замечательная группа друзей: Мария Смирнова, Алексей Кузнецов и Лена Новикова. Мы познакомились в школе и с тех пор пережили много интересного вместе. Мы поддерживаем друг друга и всегда рады новым приключениям.
+    </p>
+    <p class="align-right">
+      Вместе мы организуем поездки, вылазки на природу и просто уютные встречи. Мне повезло иметь таких надежных и веселых друзей — без них жизнь была бы скучнее. 
+    </p>
+    <div class="clear"></div>
+  </section>
+
+  <!-- Страница 5: Мои увлечения -->
+  <section id="hobbies">
+<h1>Мои увлечения</h1>
+    <img src="https://wallpapers.com/images/hd/hedgehog-pictures-01r9xp7lirnrwszo.jpg" alt="Фото увлечения" class="photo photo-right">
+    <p class="align-justify">
+      Одно из моих главных увлечений — фотография. Я люблю ловить моменты, свет и эмоции, а потом просматривать свои работы и анализировать, что получилось. Это помогает мне видеть мир по-новому и развивать творческое мышление.
+    </p>
+    <p class="align-left">
+      Еще мне нравится кататься на велосипеде и исследовать окрестности. Когда погода хорошая, я выезжаю за город, наслаждаюсь природой и свежим воздухом. Это отличный способ расслабиться и зарядиться энергией.
+    </p>
+    <div class="clear"></div>
+  </section>
+
+  <script>
+    function showSection(id) {
+      var secs = document.querySelectorAll('section');
+      secs.forEach(function(s) {
+        s.classList.remove('active');
+      });
+      var sel = document.getElementById(id);
+      if (sel) sel.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
